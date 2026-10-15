@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Expense Tracker</h1>
+
+    <div class="total-box">
+      <p>Total Spending</p>
+      <h2 id="total">Br 0.00</h2>
+    </div>
+
+    <form id="expense-form">
+      <input type="text" id="description" placeholder="Description (e.g. Lunch)" required />
+      <input type="number" id="amount" placeholder="Amount" step="0.01" required />
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Bills">Bills</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Health">Health</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="date" id="date" required />
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <div class="filter-box">
+      <label for="filter">Filter by Category:</label>
+      <select id="filter">
+        <option value="All">All</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Bills">Bills</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Health">Health</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <ul id="expense-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
